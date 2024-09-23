@@ -11,7 +11,6 @@ function Card({ data }) {
   const [state, dispatch] = useCart();
 
   const quantity = productQuantity(state, id);
-  console.log(quantity);
 
   const clickHandler = (type) => {
     dispatch({ type: type, payload: data });

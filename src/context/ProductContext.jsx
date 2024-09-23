@@ -26,5 +26,11 @@ const useProducts = () => {
   return products;
 };
 
-export { useProducts };
+const useProduct = (id) => {
+  const products = useContext(ProductContext);
+  const index = products.findIndex((item) => item.id === id);
+  return products[index];
+};
+
+export { useProducts, useProduct };
 export default ProductsProvider;
