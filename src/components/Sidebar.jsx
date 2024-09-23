@@ -20,7 +20,10 @@ function Sidebar({ query, setQuery }) {
       </div>
       <ul onClick={categoryHandler}>
         {categories.map((item) => (
-          <li key={item.id} className={query.category === item.type.toLowerCase() && styles.selected}>
+          <li
+            key={item.id}
+            className={query.category === item.type.toLowerCase() ? styles.selected : null}
+          >
             {item.type}
           </li>
         ))}
